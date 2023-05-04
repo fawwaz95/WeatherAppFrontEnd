@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ html, body{
+  width: 100%;
+  height: 100%;
+  min-width: 500px;
+  min-height: 500px;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  overflow:auto;
+  background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%);         
+}
+
+
+#cloud-intro{
+  position: relative;
+  height: 100%;
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png),
+              url(https://static.radulescu.me/examples/clouds/clouds1200_1.png),
+              url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png);
+	animation: wind 20s linear infinite;
+}
+@keyframes wind{
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+
+}
+
+.legend {
+  position: absolute;
+  width: 100px;
+  left: -7px;
+  background: #666666;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  font-size: 15px;
+  color: #ffffff;
+  text-align: right;
+}
+
