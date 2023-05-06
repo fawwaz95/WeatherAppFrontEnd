@@ -94,7 +94,7 @@ class SearchField extends React.Component {
     
 
     fetchWeatherData = () => {
-        fetch(`http://localhost:3000/CurrentWeather`, {
+        fetch(`https://weatherappfrontend.onrender.com/CurrentWeather`, { //http://localhost:3000/CurrentWeather
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
