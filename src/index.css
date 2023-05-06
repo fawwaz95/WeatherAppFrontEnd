@@ -12,6 +12,10 @@
   background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%);         
 }
 
+#root {
+  height: 100vh;
+  width: 100vw;
+}
 
 #cloud-intro{
   position: relative;
@@ -28,7 +32,6 @@
   100% {
     background-position: 1000px 200px, 1200px 300px, 1100px 250px;
   }
-
 }
 
 .legend {
