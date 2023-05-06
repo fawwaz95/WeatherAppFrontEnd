@@ -1,6 +1,7 @@
 import React from "react";
 import moment from 'moment-timezone';
 
+const PORT = process.env.PORT || 3000;
 const REACT_APP_URL = process.env.REACT_APP_URL || `http://localhost:${PORT}`;
 
 class SearchField extends React.Component {
