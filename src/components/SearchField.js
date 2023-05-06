@@ -1,6 +1,8 @@
 import React from "react";
 import moment from 'moment-timezone';
 
+const REACT_APP_URL = process.env.REACT_APP_URL || `http://localhost:${PORT}`;
+
 class SearchField extends React.Component {
     constructor(props){
         super(props);
@@ -94,7 +96,7 @@ class SearchField extends React.Component {
     
 
     fetchWeatherData = () => {
-        fetch(`https://weatherappfrontend.onrender.com/CurrentWeather`, { //http://localhost:3000/CurrentWeather
+        fetch(`${REACT_APP_URL}/CurrentWeather`, { //http://localhost:3000/CurrentWeather
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
