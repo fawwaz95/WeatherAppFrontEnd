@@ -147,7 +147,7 @@ class SearchField extends React.Component {
     render(){
         return(
             <div className='font-sans'>
-                <h1 className='text-5xl text-white'> Weather App </h1>
+                <h1 className='p-5 text-5xl text-white'> Weather App </h1>
                 <input ref={this.inputRef} className='w-80 md:w-100 lg:w-150 h-8 mt-4 p-2 rounded drop-shadow-2xl' type='search' placeholder='Search city name' onChange={this.onChangeSearchField}/>
                 <button ref={this.submitRef} className='bg-white h-8 ml-1 p-1 rounded text-black' type="submit" value="Submit" onClick={this.fetchWeatherData} >Submit</button>
             </div>
