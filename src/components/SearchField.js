@@ -106,6 +106,8 @@ class SearchField extends React.Component {
         })
         .then(resp => resp.json())
         .then(data => {
+            console.log('This is the react_app_url ' + process.env.REACT_APP_URL);
+            console.log('This is the port ' + process.env.PORT);
           if(data.name){
             const transformedData = this.collectWeatherData(data);
             this.setState({
