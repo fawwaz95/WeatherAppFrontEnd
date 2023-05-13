@@ -4,8 +4,8 @@ import LoadingIcons from 'react-loading-icons'
 import { Puff } from 'react-loading-icons'
 import WeatherCard from './WeatherCard';
 
-const PORT = process.env.PORT || 3000;
-const backEndServer = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
+const PORT = (!process.env.PORT) ? 3000 : process.env.PORT;
+const BACKENDSERVER = (!process.env.RENDER_EXTERNAL_URL) ?  `http://localhost:${PORT}` : process.env.RENDER_EXTERNAL_URL;
 
 class FiveDayForecast extends React.Component{
     constructor(props){
@@ -27,8 +27,8 @@ class FiveDayForecast extends React.Component{
     }
  
     fetch24HourWeatherData = (city) => {
-        console.log(`What server are we using ${backEndServer}`);
-        fetch(`${backEndServer}/FiveDayForecast`, {
+        console.log(`What server are we using ${BACKENDSERVER}`);
+        fetch(`${BACKENDSERVER}/FiveDayForecast`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
