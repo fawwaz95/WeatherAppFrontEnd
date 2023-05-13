@@ -27,8 +27,7 @@ class FiveDayForecast extends React.Component{
     }
  
     fetch24HourWeatherData = (city) => {
-        console.log(`What server are we using ${BACKENDSERVER}`);
-        fetch(`${BACKENDSERVER}/FiveDayForecast`, {
+        fetch(`http://localhost:3000/CurrentWeather`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

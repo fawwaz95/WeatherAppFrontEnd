@@ -97,7 +97,6 @@ class SearchField extends React.Component {
     
 
     fetchWeatherData = () => {
-        console.log(`What server are we using ${BACKENDSERVER}`);
         fetch(`${BACKENDSERVER}/CurrentWeather`, { //http://localhost:3000/CurrentWeather
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
