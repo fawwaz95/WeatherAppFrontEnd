@@ -4,8 +4,8 @@ import LoadingIcons from 'react-loading-icons'
 import { Puff } from 'react-loading-icons'
 import WeatherCard from './WeatherCard';
 
-const PORT = (!process.env.PORT) ? 3000 : process.env.PORT;
-const BACKENDSERVER = (!process.env.RENDER_EXTERNAL_URL) ?  `http://localhost:${PORT}` : process.env.RENDER_EXTERNAL_URL;
+const PORT = process.env.PORT || 3000 ;
+const BACKENDSERVER = process.env.REACT_APP_URL ||  `http://localhost:${PORT}`;
 
 class FiveDayForecast extends React.Component{
     constructor(props){
