@@ -97,6 +97,7 @@ class SearchField extends React.Component {
     
 
     fetchWeatherData = () => {
+        console.log(`Env Variable 1 ${process.env.REACT_APP_URL}`);
         fetch(`${backEndServer}/CurrentWeather`, { //http://localhost:3000/CurrentWeather
           method: 'POST',
           headers: {'Content-Type': 'application/json'},

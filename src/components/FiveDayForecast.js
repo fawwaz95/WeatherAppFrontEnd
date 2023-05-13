@@ -27,6 +27,7 @@ class FiveDayForecast extends React.Component{
     }
  
     fetch24HourWeatherData = (city) => {
+        console.log(`Env Variable ${process.env.REACT_APP_URL}`);
         fetch(`${backEndServer}/FiveDayForecast`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
