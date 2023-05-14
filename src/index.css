@@ -16,6 +16,8 @@
 }
 
 #cloud-intro{
+  height: 100vh;
+  width: 100vw;
   position: relative;
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png),
               url(https://static.radulescu.me/examples/clouds/clouds1200_1.png),
