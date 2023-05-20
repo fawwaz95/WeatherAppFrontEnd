@@ -177,7 +177,7 @@ class FiveDayForecast extends React.Component{
     render(){
          return(
             this.state.fiveDayForecastArray.length > 1 ?
-                <div className='m-10 p-2 grid grid-cols-1 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 border-solid border-2 border-white-600 drop-shadow-xl rounded-3xl bg-gradient-to-r from-gray-100 to-gray-300'>
+                <div className='m-10 p-2 grid grid-cols-1 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 border-solid border-2 border-white-600 drop-shadow-xl rounded-3xl bg-slate-200'>
                     {             
                          !this.state.fetchingData ?
                                 this.state.fiveDayForecastArray.map((fiveDayForeCastItems, index) => {
