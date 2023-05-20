@@ -148,24 +148,33 @@ class SearchField extends React.Component {
         return(
             <div className='font-sans'>
                 <h1 className='p-5 text-5xl text-white'> Weather App </h1>
-                <label>
-                        <span ref={this.submitRef} 
-                              className='relative inline-block -mr-8 z-10' 
-                              onClick={this.fetchWeatherData}>
-                            <svg className='h-4 w-5 fill-black' 
-                                 xmlns='http://www.w3.org/2000/svg' 
-                                 viewBox='0 0 25 25'>
-                                <path
-                                    d='M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z'>
-                                </path>
-                            </svg>
-                        </span>
-                        <input ref={this.inputRef}
-                                className='w-3/4 p-10 z-0 bg-white placeholder:font-italitc rounded-full py-2 pl-10 pr-4 focus:outline-none'
-                                placeholder='Enter your city to search' 
-                                type='text' 
-                                onChange={this.onChangeSearchField}/>
-                </label>
+                  <div className="flex justify-center">
+                    <div className="relative w-3/4">
+                      <input ref={this.inputRef}  
+                             onChange={this.onChangeSearchField} 
+                             className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" 
+                             placeholder="Search a City..." 
+                             required/>
+                      <button type="submit" 
+                              ref={this.submitRef}
+                              onClick={this.fetchWeatherData}
+                              className="absolute top-0 right-0 p-2.5 text-sm font">
+                                  <svg aria-hidden="true" 
+                                       class="w-5 h-5" 
+                                       fill="none" 
+                                       stroke="currentColor" 
+                                       viewBox="0 0 24 24" 
+                                       xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" 
+                                              stroke-linejoin="round" 
+                                              stroke-width="2" 
+                                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
+                                        </path>
+                                    </svg>
+                                  <span class="sr-only">Search</span>
+                      </button>
+                    </div>
+                  </div>
             </div>
         )
     }
