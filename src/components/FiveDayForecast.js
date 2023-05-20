@@ -58,8 +58,8 @@ class FiveDayForecast extends React.Component{
                 return {
                     dayOfWeek: this.convertFullDateToDayOfWeek(items.dt_txt),
                     fullDate: this.convertFullDateToDate(items.dt_txt),
-                    temp: parseFloat(Math.trunc(items.main.temp-273.15+5)).toString(), //adding plus 5 because temperature returned is slightly below actual temperature
-                    feelsLike: parseFloat(Math.trunc(items.main.feels_like-273.15+5)).toString(),
+                    temp: parseFloat(Math.trunc(items.main.temp-273.15)).toString(),
+                    feelsLike: parseFloat(Math.trunc(items.main.feels_like-273.15)).toString(),
                     windSpeed: Math.round(items.wind.speed * 3.6),
                 };
         })
