@@ -51,7 +51,7 @@ class App extends React.Component {
 
   render(){
     return(
-      <div className="App center" id="cloud-intro">
+      <div className="App center" id="cloud-animation">
         {this.state.nightMode ? <style>{'body {background:linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%) }'}</style>
          : <style>{'body {background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%)'}</style>}
         <div>

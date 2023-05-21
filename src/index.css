@@ -5,25 +5,19 @@
  html, body{
   margin: 0;
   padding: 0;
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%); 
+}
+
+#cloud-animation{
+  height: 100vh;
+  width: 100vw;
   overflow:auto;
-  background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%);         
-}
-
-#root {
-  height: 100vh;
-  width: 100vw;
-}
-
-#cloud-intro{
-  height: 100vh;
-  width: 100vw;
-  position: relative;
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png),
               url(https://static.radulescu.me/examples/clouds/clouds1200_1.png),
               url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png);
 	animation: wind 20s linear infinite;
 }
+
 @keyframes wind{
   0% {
     background-position: 0 200px, 0 300px, 100px 250px;
@@ -43,4 +37,3 @@
   color: #ffffff;
   text-align: right;
 }
-
