@@ -57,8 +57,9 @@ class SearchField extends React.Component {
         const formatCity = getCity.charAt(0).toUpperCase() + getCity.slice(1);
 
         return formatCity;
+     }else{
+        return cityData;
      }
-
     }
 
     convertLocalTime = (timeZone) => {
